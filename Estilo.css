@@ -1,0 +1,86 @@
+/* Definindo o fundo e aplicando desfoque */
+body {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    color: inherit;
+    /* Corrigido para cor válida */
+    font-family: Arial, sans-serif;
+}
+
+/* Pseudo-elemento para a imagem de fundo esfumaçada */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('plano\ de\ fundo\ .jpg');
+    /* Corrigido caminho da imagem */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(8px);
+    /* Aplica o desfoque */
+    z-index: -1;
+    /* Coloca a imagem atrás do conteúdo */
+}
+
+h1 {
+    color: rgb(12, 12, 12);
+    text-align: center;
+
+    font-size: 3em;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Ajuste na sombra */
+    margin-top: 1px;
+    text-align: center;
+}
+
+a{
+    color: rgb(7, 23, 44);
+    text-decoration: none;
+}
+.link
+{display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Cor de fundo do botão */
+  color: rgb(255, 255, 255); /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s; /* Transição suave para a cor do fundo */
+}
+
+.link:hover {
+  background-color: #00ccff; /* Cor de fundo quando o mouse passar por cima */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
